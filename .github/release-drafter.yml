@@ -4,13 +4,13 @@ categories:
     - title: Breaking Changes 🛠
       label: 'breaking-change'
     - title: Exciting New Features 🎉
-      labels: 'feature'
+      label: 'feature'
     - title: Bug Fixing 🙇
-      labels: 'fix'
+      label: 'fix'
     - title: CI Changes 🤖
-      labels: 'ci'
+      label: 'ci'
     - title: Miscellaneous 🧺
-      labels: '*'
+      label: '*'
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
 #version-resolver:

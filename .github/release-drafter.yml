@@ -1,4 +1,4 @@
-name-template: 'v$RESOLVED_VERSION 🌈'
+name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
 categories:
     - title: Breaking Changes 🛠
@@ -14,7 +14,8 @@ categories:
         - 'chore'
         - 'documentation'
         - 'refactor'
-change-template: '- $TITLE @$AUTHOR (#$NUMBER) $BODY'
+        - 'dependencies'
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
 version-resolver:
     major:
@@ -27,9 +28,11 @@ version-resolver:
         labels:
             - 'patch'
     default: patch
+header: |
+  ## What's Changed
+footer: |
+ **Full Changelog:** (https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION)[$PREVIOUS_TAG...v$RESOLVED_VERSION]
 template: |
-    ## Changes
-
     $CHANGES
 autolabeler:
     - label: 'chore'

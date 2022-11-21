@@ -10,45 +10,41 @@ categories:
     - title: CI Changes 🤖
       label: 'ci'
     - title: Miscellaneous 🧺
-      label: '*'
+      labels:
+        - 'chore'
+        - 'documentation'
+        - 'refactor'
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
-#version-resolver:
-#    major:
-#        labels:
-#            - 'major'
-#    minor:
-#        labels:
-#            - 'minor'
-#    patch:
-#        labels:
-#            - 'patch'
-#    default: patch
+version-resolver:
+    major:
+        labels:
+            - 'major'
+    minor:
+        labels:
+            - 'minor'
+    patch:
+        labels:
+            - 'patch'
+    default: patch
 template: |
     ## Changes
 
     $CHANGES
 autolabeler:
     - label: 'chore'
-      title:
-          - '/chore/i'
       branch:
-          - '/chore\/.+/'
+          - '/^chore[^/]*\/.+/'
     - label: 'fix'
-      title:
-          - '/fix/i'
       branch:
-          - '/fix\/.+/'
+          - '/^fix[^/]*\/.+/'
     - label: 'feature'
-      title:
-          - '/feat/i'
       branch:
-          - '/feature\/.+/'
+          - '/^feat[^/]*\/.+/'
     - label: 'ci'
-      title:
-          - '/ci/i'
     - label: 'refactor'
-      title:
-          - '/refactor/i'
       branch:
-          - '/refactor\/.+/'
+          - '/^refactor[^/]*\/.+/'
+    - label: 'documenation'
+      branch:
+        - '/^doc[^/]*\/.+/'

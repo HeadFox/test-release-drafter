@@ -31,6 +31,7 @@ version-resolver:
 header: |
   ## What's Changed
 footer: |
+
  **Full Changelog:** [$PREVIOUS_TAG...v$RESOLVED_VERSION](https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION)
 template: |
     $CHANGES
